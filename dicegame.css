@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #c31432, #240b36);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  width: 800px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.player {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.player.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.player.winner {
+  background-color: #000;
+  color: white;
+}
+
+.score {
+  font-size: 60px;
+  color: #ff4d79;
+}
+
+.current-box {
+  background-color: #d6336c;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.current-box span:first-child {
+  font-size: 12px;
+}
+
+.current-box span:last-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dice {
+  width: 40px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 5px auto;
+  display: block;
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-new {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
